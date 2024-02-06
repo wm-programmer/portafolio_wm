@@ -1,0 +1,165 @@
+/*------------------Tarjeta Azul--------------------------- */
+.tarjeta {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    z-index: 2000;/*parte azul*/
+
+}
+
+  /* Enlace dentro de la tarjeta */
+.tarjeta a {
+    position: absolute;
+    width: 200%;
+    left: -20%;
+    top: -30%;
+    height: 44px;
+    line-height: 47px;
+    background-color: #026ccf;/*Color de la etiqueta izquierda*/
+    color: #f0f0f0;/*Color de letra de la etiqueta*/
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: -2px 3px 1px rgb(0 0 0 / 23%);
+    transform: translate3d(0,0,0) rotate(45deg);
+    transform-origin: 4% 0;
+}
+
+.tarjeta a:hover{
+    background-color: #0b5fad; /*Efecto de aclarar la etiqueta*/
+    color: white;
+}
+/*-------------Paginas---------------------*/
+.paginas{
+    position: fixed;
+    left: 0;
+    top: calc(50% - 55px);
+    width: 55px;
+    height: 165px;
+
+}
+
+.lista-paginas{
+    list-style: none;
+}
+
+/*------------Follows----------*/
+/***Github***/
+.github{
+    background-color: #4e545a;/*Color del git hub*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 55px;
+    padding-left: 20px;
+    margin-left: -20px;
+    /*padding-left: 20px;
+    margin-left: -60px;*/
+    
+}
+
+.github span{
+    width: 35px;
+    height: 35px;
+    background-image: url(/src/assets/images/github.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-indent: -9999em;
+}
+
+.github:hover{
+    margin-left: 2px;
+    /*padding-left: 30px;
+    padding-right: 10px;*/
+}
+
+/**Linedin**/
+.linkedin{
+    background-color: #0e76a8;/*Color de linkedin*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 55px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+
+.linkedin span{
+    width: 35px;
+    height: 35px;
+    background-image: url(/src/assets/images/linkedin.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-indent: -9999em;   
+}
+
+.linkedin:hover{
+    margin-left: 2px;
+}
+/**--------------Dispositivo Mobil ------------------*/
+@media(max-width:950px){
+    /*Tarjeta Azul*/
+.tarjeta{
+    z-index: 500;
+}
+
+    /*Paginas*/
+    /*-------------Paginas---------------------*/
+.paginas{
+    position: fixed;
+    left: 0;
+    top: auto;
+    bottom: 35px;
+    width: 110px;
+    height: 55px;
+    
+}
+
+.lista-paginas{
+    display: flex;
+}
+
+.github{
+    position: absolute;
+    padding-left: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    width: 55px;
+}
+
+.github:hover{
+    /*padding-left: 0;
+    padding-right: 0;*/
+    margin-left: 0;
+    transform: translateY(5px);
+}
+.linkedin{
+    position: absolute;
+    padding-left: 0;
+    margin-left: 0;
+    top: 0;
+    right: 0;
+    width: 55px;
+}
+
+.linkedin:hover{
+    /*padding-left: 0;
+    padding-right: 0;*/
+    transform: translateY(5px);
+}
+
+
+}
+
+@media(max-width:950px){
+    .tarjeta a{
+        transform-origin: 10% 0;
+    }
+}
